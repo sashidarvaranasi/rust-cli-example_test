@@ -36,7 +36,7 @@ fn main() {
         .author("Alfredo Deza")
         .about("lsblk in Rust")
         .arg(
-            clap::Arg::with_name("device")
+            clap::Arg::new("device")
                 .help("Device to query")
                 .required(true)
                 .index(1)
