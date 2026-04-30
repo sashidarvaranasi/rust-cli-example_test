@@ -43,7 +43,7 @@ fn main() {
         )
         .get_matches();
 
-    let device = matches.value_of("device").unwrap();
+    let device = matches.get_one::<String>("device").unwrap();
     let output = serde_json::to_string(&run_lsblk(&device)).unwrap();
     println!("{}", output);
 }
