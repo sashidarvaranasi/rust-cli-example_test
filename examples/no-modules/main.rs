@@ -31,7 +31,7 @@ fn run_lsblk(device: &str) -> serde_json::Value {
 }
 
 fn main() {
-    let matches = clap::App::new("lsblk")
+    let matches = clap::Command::new("lsblk")
         .version("0.0.1")
         .author("Alfredo Deza")
         .about("lsblk in Rust")
